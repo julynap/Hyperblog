@@ -1,2 +1,7 @@
 esta es mi historia julian mendoza
+<<<<<<< HEAD
 manana nos enfocaremos en su vida laboral
+=======
+y tengo 27 anos
+y soy ingeniero de sistemass
+>>>>>>> 877760e
