@@ -1,0 +1,59 @@
+ls -al ( listar propiedad de carpetas)
+    - ls -a: Mostrar todos los archivos, incluso los ocultos.
+    - ls -l: Ver todos los archivos como una lista.
+touch test.txt creacio archivos vacios
+history ( gistorial de comandos)
+rm vacio.txt  ( remove arvhivo)
+crtl L (limpiar consola)
+nano test.txt(editar acrhivo)
+
+
+ git rm --cached historia.txt sacardlo de add
+
+
+ configuraciones de usuario 
+ --------------------------------------
+ git config --global user.name "julian"
+ git config --global user.email "kaizenigo@gmail.com"
+ git config --list
+ --------------------------------------
+
+ git log archivos (revisar historial)
+ git show archivo (cambios realizados a la version actual )
+
+ salir de venta de advertencia de commiut
+ esc + shift zz
+shift i (insertar texto)
+$ git diff 31bb6d7f0c91778b89edcb0ad2ef1e304cebd18a 4a01ea3e0e0a7907b4abfa19b36ec396e27e0475
+(comparaciones de commit)
+
+
+-------------------------
+retornando a versiones antiguas
+ git reset b405ce1f20a19424223729b3cced4cf72d207ef1 --hard (borra todos)
+hacia arriba
+
+git log --stat ( mas detalle de cambios)
+
+git checkout 31bb6d7f0c91778b89edcb0ad2ef1e304cebd18a historia.txt
+(regresar versioin anterior)
+
+ git checkout master historia.txt
+(git retornando version master)
+
+git rm --cached <> take archive out to stagged area
+git rm --force <> elimina archivo de git y del disco duro
+git reset HEAD baja todo del stagging
+git reset --soft  Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.
+git reset --hard OJO BORRA TODO
+
+----------------------------------------
+
+
+
+
+
+
+
+
+
