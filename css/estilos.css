@@ -57,3 +57,13 @@ body
     color: black;
     
 }
+
+
+
+.coinmarketcap-currency-widget {
+    width: 33%;
+    margin: 100px auto;
+    background-color: white;
+}
+
+
