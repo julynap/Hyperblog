@@ -14,7 +14,7 @@ nano test.txt(editar acrhivo)
  configuraciones de usuario 
  --------------------------------------
  git config --global user.name "julian"
- git config --global user.email "kaizenigo@gmail.com"
+ git config --globl user.email "kaizenigo@gmail.com"
  git config --list
  --------------------------------------
 
@@ -48,12 +48,82 @@ git reset --soft  Borramos todo el historial y los registros de Git pero guardam
 git reset --hard OJO BORRA TODO
 
 ----------------------------------------
+La cabecera o HEAD representan la rama y el commit de esa rama donde estamos trabajando. 
+Por defecto, esta cabecera aparecerá en el último commit de nuestra rama principal. 
+Pero podemos cambiarlo al crear una rama (git branch rama, git checkout -b rama) 
+o movernos en el tiempo a cualquier otro commit de cualquier otra rama con los comandos 
+(git reset id-commit, git checkout rama-o-id-commit).
 
 
+git commit -am -> commit y add en una sola linea
+git branch     -> en que rama esta 
 
 
+--------------------------------
+remote repository
+$ git remote add origin https://github.com/julynap/Hyperblog.git [creo espacio origin]
+git remote  [validacion de espacio final]
+git remote -v [direccion de origin]
+git pull origin master --allow-unrelated-histories {albajar el repo remoto sincronizarlo con master local"}
+$ git config -l [propiedades usuario]
 
 
+-------------------
+unir con git origin de manera segura 
 
+CONEXION SEGURA 
+
+$ ssh-keygen -t rsa -b 4096 -C "kaizenigeno@gmail.com" {generando llaves}
+$ eval $(ssh-agent -s)
+Agent pid 860
+$ ssh-add ~/.ssh/id_rsa  [agreganod llave privada ] 
+~ este carecter retorna al home
+git remote -v {validar endpoints}
+git remote set-url origin git@github.com:julynap/Hyperblog.git {setear otro endpoint a partir de la validacion del proyecto en git web y ubicar en endpoint SSH}
+git log --all --graph {grafico de los commit y detalle}
+git log --all --graph --decorate --oneline {mas comprimido el log}
+alias detail="git log --all --graph --decorate --oneline" {generando alias}
+
+
+-----------------------------------------
+TAGS
+    Crear un nuevo tag y asignarlo a un commit: git tag -a nombre-del-tag id-del-commit.
+    Borrar un tag en el repositorio local: git tag -d nombre-del-tag.
+    Listar los tags de nuestro repositorio local: git tag o git show-ref --tags.
+    Publicar un tag en el repositorio remoto: git push origin --tags.
+    Borrar un tag del repositorio remoto: git tag -d nombre-del-tag y git push origin :refs/tags/nombre-del-tag.
+
+
+ ===========================
+ INFO branch
+
+ git show-branch all
+ gitk (version grafica)
+ git push origin cabecera (push rama)
+$ git branch -D experimiento { eliminar branch}
+ 
+
+
+En un entorno profesional normalmente se bloquea la rama master, y para enviar código a dicha rama pasa por un code review 
+y luego de su aprobación se unen códigos con los llamados merge request.
+Para realizar pruebas enviamos el código a servidores que normalmente los llamamos staging develop (servidores de pruebas) 
+luego de que se realizan las pruebas pertinentes tanto de código como de la aplicación estos pasan a el servidor de producción 
+con el ya antes mencionado merge request.
+
+
+imgur.com revisarlo
+---------------------------------------
+REBASE 
+
+1 LA QUE haog cambios ejemplo experimiento
+    git checkout experimento
+    git rebase master (trae todo lo de master hace merge con esta rama temportal
+    )como si hiciera commit del ultimo commit de master
+
+2 LA RAMA master
+    paso a rama master
+    git rebase experimiento
+    reajusta y hace merge deja version completa en master
+    
 
 

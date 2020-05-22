@@ -5,4 +5,4 @@ experimento 1
 experimento 2
 Master1
 Master2
-y soy ingeniero de sistemass
+y soy ingeniero de software
