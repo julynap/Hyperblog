@@ -156,3 +156,7 @@ Para obtener el historial de cambios de un archivo específico existe la opción
 git log --follow -- nombreArchivo
 
 git log --follow -p -- nombreArchivo
+
+----------------------------------------------------
+
+git cherry-pick 6a37ba2 esto trae un commit de otro branch y lo pega a rama master comando hecho desde master
