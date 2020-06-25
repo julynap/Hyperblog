@@ -146,6 +146,13 @@ estamos probando algo y luego quieres volver rápidamente a tu versión anterior
 Para saber qué archivos vamos a borrar tecleamos git clean --dry-run
 Para borrar todos los archivos listados (que no son carpetas) tecleamos git clean -f
 
+------------------------
+buscar archivos
 
 git log --oneline
 
+Para obtener el historial de cambios de un archivo específico existe la opción --follow del git log
+
+git log --follow -- nombreArchivo
+
+git log --follow -p -- nombreArchivo
