@@ -6,3 +6,4 @@ Un blog de pruebas
 -- Disponible para todas las edades
 - creado por el platzi team
 - incluye ejemplos en windows lonux y mac
+- disponbile para todos
